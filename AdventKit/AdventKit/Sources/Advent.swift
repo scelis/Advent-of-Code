@@ -17,7 +17,7 @@ public enum Advent {
             let input = FileManager.default.contents(atPath: url.path),
             let string = String(data: input, encoding: .utf8)
         {
-            return string
+            return string.trimmingCharacters(in: .whitespacesAndNewlines)
         } else {
             return nil
         }

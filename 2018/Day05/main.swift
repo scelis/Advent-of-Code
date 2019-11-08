@@ -28,7 +28,7 @@ func reducedPolymerLength(input: String) -> Int {
     return history.count
 }
 
-let input = Advent.contentsOfFile(withName: "input.txt")!.trimmingCharacters(in: .whitespacesAndNewlines)
+let input = Advent.contentsOfFile(withName: "input.txt")!
 print("Part 1: \(reducedPolymerLength(input: input))")
 
 let validPolymers = Array("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
