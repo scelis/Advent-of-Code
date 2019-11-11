@@ -11,6 +11,7 @@
 		6306AFAC2375CEDB00D685FA /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306AFAB2375CEDB00D685FA /* String+Extensions.swift */; };
 		6306AFF12375D96E00D685FA /* Advent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306AFF02375D96E00D685FA /* Advent.swift */; };
 		6306B02A2379B7B900D685FA /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306B0292379B7B900D685FA /* Coordinate.swift */; };
+		63650D73237A15AF0014A801 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63650D72237A15AF0014A801 /* Array+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		6306AFAB2375CEDB00D685FA /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		6306AFF02375D96E00D685FA /* Advent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advent.swift; sourceTree = "<group>"; };
 		6306B0292379B7B900D685FA /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		63650D72237A15AF0014A801 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				6306AFA32375CE9400D685FA /* AdventKit.h */,
 				6306AFF02375D96E00D685FA /* Advent.swift */,
+				63650D72237A15AF0014A801 /* Array+Extensions.swift */,
 				6306B0292379B7B900D685FA /* Coordinate.swift */,
 				6306AFAB2375CEDB00D685FA /* String+Extensions.swift */,
 			);
@@ -160,6 +163,7 @@
 				6306AFF12375D96E00D685FA /* Advent.swift in Sources */,
 				6306AFAC2375CEDB00D685FA /* String+Extensions.swift in Sources */,
 				6306B02A2379B7B900D685FA /* Coordinate.swift in Sources */,
+				63650D73237A15AF0014A801 /* Array+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
