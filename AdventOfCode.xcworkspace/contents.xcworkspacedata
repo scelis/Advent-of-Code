@@ -7,4 +7,7 @@
    <FileRef
       location = "group:2018/2018.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:2019/2019.xcodeproj">
+   </FileRef>
 </Workspace>
