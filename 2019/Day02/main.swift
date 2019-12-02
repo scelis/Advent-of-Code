@@ -18,28 +18,17 @@ func part1(integers: [Int], noun: Int = 12, verb: Int = 2) -> Int {
     integers[2] = verb
 
     while true {
-        let opcode = Opcode(rawValue: integers[position])!
-
-        if opcode == .halt {
-            break
-        }
-
-        let pos1 = integers[position + 1]
-        let pos2 = integers[position + 2]
-        let pos3 = integers[position + 3]
-        let val1 = integers[pos1]
-        let val2 = integers[pos2]
-
-        if opcode == .add {
-            integers[pos3] = val1 + val2
-        } else if opcode == .multiply {
-            integers[pos3] = val1 * val2
+        switch Opcode(rawValue: integers[position])! {
+        case .halt:
+            return integers[0]
+        case .add:
+            integers[integers[position + 3]] = integers[integers[position + 1]] + integers[integers[position + 2]]
+        case .multiply:
+            integers[integers[position + 3]] = integers[integers[position + 1]] * integers[integers[position + 2]]
         }
 
         position += 4
     }
-
-    return integers[0]
 }
 
 func part2(integers: [Int]) -> Int {
