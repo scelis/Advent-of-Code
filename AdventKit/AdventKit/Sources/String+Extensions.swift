@@ -53,4 +53,14 @@ public extension String {
             }
         })
     }
+
+    func enumerateLines(using block: (String) -> ()) {
+        let lines = self.components(separatedBy: .newlines)
+        for line in lines {
+            let line = line.trimmingCharacters(in: .whitespaces)
+            if !line.isEmpty {
+                block(line)
+            }
+        }
+    }
 }
