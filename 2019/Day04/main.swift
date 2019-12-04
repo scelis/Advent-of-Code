@@ -1,8 +1,6 @@
 import AdventKit
 import Foundation
 
-let range = 146810...612564
-
 func isValidPassword(number: Int, strict: Bool) -> Bool {
     var previous: Int?
     var foundDouble = false
@@ -25,6 +23,7 @@ func isValidPassword(number: Int, strict: Bool) -> Bool {
         }
 
         if
+            strict,
             isIncreasing,
             foundStrictDouble == false,
             index < digits.count - 1,
@@ -52,5 +51,6 @@ func numberOfPasswords(in range: ClosedRange<Int>, strict: Bool) -> Int {
     return numberOfPasswords
 }
 
+let range = 146810...612564
 print("Part 1: \(numberOfPasswords(in: range, strict: false))")
 print("Part 2: \(numberOfPasswords(in: range, strict: true))")

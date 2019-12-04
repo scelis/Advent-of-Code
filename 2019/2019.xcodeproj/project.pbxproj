@@ -22,6 +22,9 @@
 		6364B4E62397E71800300316 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6364B4E52397E71800300316 /* main.swift */; };
 		6364B4F12397E71E00300316 /* AdventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6364B4A123954D2B00300316 /* AdventKit.framework */; };
 		6364B4F22397E71E00300316 /* AdventKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6364B4A123954D2B00300316 /* AdventKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6364B4FD2397EDEF00300316 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6364B4FC2397EDEF00300316 /* main.swift */; };
+		6364B5082397EE1700300316 /* AdventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6364B4A123954D2B00300316 /* AdventKit.framework */; };
+		6364B5092397EE1700300316 /* AdventKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6364B4A123954D2B00300316 /* AdventKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,6 +72,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6364B50A2397EE1700300316 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6364B5092397EE1700300316 /* AdventKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +102,9 @@
 		6364B4E32397E71700300316 /* Day04.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Day04.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6364B4E52397E71800300316 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		6364B4EC2397E71800300316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6364B4FA2397EDEF00300316 /* Day05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Day05.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6364B4FC2397EDEF00300316 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		6364B5032397EDF000300316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +140,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6364B4F72397EDEF00300316 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6364B5082397EE1700300316 /* AdventKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -133,6 +158,7 @@
 				6364B4AC2395504700300316 /* Day02 */,
 				6364B4C32396908200300316 /* Day03 */,
 				6364B4E42397E71800300316 /* Day04 */,
+				6364B4FB2397EDEF00300316 /* Day05 */,
 				6364B49023954CB400300316 /* Products */,
 				6364B4A023954D2B00300316 /* Frameworks */,
 			);
@@ -145,6 +171,7 @@
 				6364B4AB2395504700300316 /* Day02.app */,
 				6364B4C22396908200300316 /* Day03.app */,
 				6364B4E32397E71700300316 /* Day04.app */,
+				6364B4FA2397EDEF00300316 /* Day05.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -194,6 +221,15 @@
 				6364B4EC2397E71800300316 /* Info.plist */,
 			);
 			path = Day04;
+			sourceTree = "<group>";
+		};
+		6364B4FB2397EDEF00300316 /* Day05 */ = {
+			isa = PBXGroup;
+			children = (
+				6364B4FC2397EDEF00300316 /* main.swift */,
+				6364B5032397EDF000300316 /* Info.plist */,
+			);
+			path = Day05;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +307,24 @@
 			productReference = 6364B4E32397E71700300316 /* Day04.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6364B4F92397EDEF00300316 /* Day05 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6364B5052397EDF000300316 /* Build configuration list for PBXNativeTarget "Day05" */;
+			buildPhases = (
+				6364B4F62397EDEF00300316 /* Sources */,
+				6364B4F72397EDEF00300316 /* Frameworks */,
+				6364B4F82397EDEF00300316 /* Resources */,
+				6364B50A2397EE1700300316 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Day05;
+			productName = Day05;
+			productReference = 6364B4FA2397EDEF00300316 /* Day05.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -293,6 +347,9 @@
 					6364B4E22397E71700300316 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
+					6364B4F92397EDEF00300316 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
 				};
 			};
 			buildConfigurationList = 6364B48A23954CB400300316 /* Build configuration list for PBXProject "2019" */;
@@ -312,6 +369,7 @@
 				6364B4AA2395504700300316 /* Day02 */,
 				6364B4C12396908200300316 /* Day03 */,
 				6364B4E22397E71700300316 /* Day04 */,
+				6364B4F92397EDEF00300316 /* Day05 */,
 			);
 		};
 /* End PBXProject section */
@@ -342,6 +400,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6364B4E12397E71700300316 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6364B4F82397EDEF00300316 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -380,6 +445,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6364B4E62397E71800300316 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6364B4F62397EDEF00300316 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6364B4FD2397EDEF00300316 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +724,44 @@
 			};
 			name = Release;
 		};
+		6364B5062397EDF000300316 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4DS2QCZC54;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Day05/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sebastiancelis.Day05;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6364B5072397EDF000300316 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4DS2QCZC54;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Day05/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sebastiancelis.Day05;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -695,6 +806,15 @@
 			buildConfigurations = (
 				6364B4EF2397E71800300316 /* Debug */,
 				6364B4F02397E71800300316 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6364B5052397EDF000300316 /* Build configuration list for PBXNativeTarget "Day05" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6364B5062397EDF000300316 /* Debug */,
+				6364B5072397EDF000300316 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
