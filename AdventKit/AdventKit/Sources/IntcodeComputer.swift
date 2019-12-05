@@ -47,15 +47,6 @@ public class IntcodeComputer {
         self.memory = memory
     }
 
-    public func valueForParameter(at: Int, mode: ParameterMode) -> Int {
-        switch mode {
-        case .position:
-            return memory[memory[at]]
-        case .immediate:
-            return memory[at]
-        }
-    }
-
     public func valueForParameter(_ i: Int, offset: Int) -> Int {
         var remainder = memory[i] / 100
         for _ in 0..<(offset - 1) {
