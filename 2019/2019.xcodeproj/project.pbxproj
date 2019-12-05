@@ -25,6 +25,7 @@
 		6364B4FD2397EDEF00300316 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6364B4FC2397EDEF00300316 /* main.swift */; };
 		6364B5082397EE1700300316 /* AdventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6364B4A123954D2B00300316 /* AdventKit.framework */; };
 		6364B5092397EE1700300316 /* AdventKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6364B4A123954D2B00300316 /* AdventKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6364B51223993EF200300316 /* input.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6364B51123993EF200300316 /* input.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -105,6 +106,7 @@
 		6364B4FA2397EDEF00300316 /* Day05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Day05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6364B4FC2397EDEF00300316 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		6364B5032397EDF000300316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6364B51123993EF200300316 /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				6364B4FC2397EDEF00300316 /* main.swift */,
+				6364B51123993EF200300316 /* input.txt */,
 				6364B5032397EDF000300316 /* Info.plist */,
 			);
 			path = Day05;
@@ -410,6 +413,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6364B51223993EF200300316 /* input.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

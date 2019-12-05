@@ -13,6 +13,7 @@
 		6306B02A2379B7B900D685FA /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306B0292379B7B900D685FA /* Coordinate.swift */; };
 		6364B4D62396987000300316 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6364B4D52396987000300316 /* Direction.swift */; };
 		6364B4F52397E7F000300316 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6364B4F42397E7F000300316 /* Int+Extensions.swift */; };
+		6364B510239934EA00300316 /* IntcodeComputer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6364B50F239934EA00300316 /* IntcodeComputer.swift */; };
 		63650D73237A15AF0014A801 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63650D72237A15AF0014A801 /* Array+Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		6306B0292379B7B900D685FA /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		6364B4D52396987000300316 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		6364B4F42397E7F000300316 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		6364B50F239934EA00300316 /* IntcodeComputer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntcodeComputer.swift; sourceTree = "<group>"; };
 		63650D72237A15AF0014A801 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +75,7 @@
 				6306B0292379B7B900D685FA /* Coordinate.swift */,
 				6364B4D52396987000300316 /* Direction.swift */,
 				6364B4F42397E7F000300316 /* Int+Extensions.swift */,
+				6364B50F239934EA00300316 /* IntcodeComputer.swift */,
 				6306AFAB2375CEDB00D685FA /* String+Extensions.swift */,
 			);
 			path = Sources;
@@ -169,6 +172,7 @@
 				6306AFF12375D96E00D685FA /* Advent.swift in Sources */,
 				6306AFAC2375CEDB00D685FA /* String+Extensions.swift in Sources */,
 				6306B02A2379B7B900D685FA /* Coordinate.swift in Sources */,
+				6364B510239934EA00300316 /* IntcodeComputer.swift in Sources */,
 				6364B4F52397E7F000300316 /* Int+Extensions.swift in Sources */,
 				6364B4D62396987000300316 /* Direction.swift in Sources */,
 				63650D73237A15AF0014A801 /* Array+Extensions.swift in Sources */,
