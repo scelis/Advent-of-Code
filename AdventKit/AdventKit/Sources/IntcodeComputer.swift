@@ -41,49 +41,48 @@ public class IntcodeComputer {
         case immediate = 1
     }
 
+    public enum State {
+        case none
+        case running
+        case awaitingInput
+        case halted
+    }
+
+    private(set) public var state = State.none
     public var memory: [Int]
+    private var inputBuffer: [Int] = []
+    public var outputBuffer: [Int] = []
+    private var i = 0
 
     public init(memory: [Int]) {
         self.memory = memory
     }
 
-    public func valueForParameter(_ i: Int, offset: Int) -> Int {
-        var remainder = memory[i] / 100
-        for _ in 0..<(offset - 1) {
-            remainder = remainder / 10
-        }
+    public func run(input: [Int] = []) {
+        state = .running
+        inputBuffer.append(contentsOf: input)
 
-        let mode = ParameterMode(rawValue: remainder % 10)!
-        switch mode {
-        case .position:
-            return memory[memory[i + offset]]
-        case .immediate:
-            return memory[i + offset]
-        }
-    }
-
-    public func run(input: Int = 0) -> [Int] {
-        var running = true
-        var i = 0
-        var output: [Int] = []
-
-        while running {
+        while state == .running {
             let opcode = Opcode(rawValue: memory[i] % 100)!
 
             var jumped = false
             switch opcode {
             case .halt:
-                running = false
+                state = .halted
             case .add, .multiply:
                 let a = valueForParameter(i, offset: 1)
                 let b = valueForParameter(i, offset: 2)
                 let f: (Int, Int) -> Int = (opcode == .add) ? (+) : (*)
                 memory[memory[i + 3]] = f(a, b)
             case .input:
-                memory[memory[i + 1]] = input
+                if inputBuffer.count > 0 {
+                    memory[memory[i + 1]] = inputBuffer.removeFirst()
+                } else {
+                    state = .awaitingInput
+                }
             case .output:
                 let value = valueForParameter(i, offset: 1)
-                output.append(value)
+                outputBuffer.append(value)
             case .jumpIfTrue, .jumpIfFalse:
                 let a = valueForParameter(i, offset: 1)
                 if (opcode == .jumpIfTrue && a != 0) || (opcode == .jumpIfFalse && a == 0) {
@@ -100,11 +99,31 @@ public class IntcodeComputer {
                 }
             }
 
-            if !jumped {
+            if !jumped && state != .awaitingInput {
                 i += opcode.parameterCount + 1
             }
         }
+    }
 
-        return output
+    public func readInt() -> Int? {
+        guard !outputBuffer.isEmpty else { return nil }
+        return outputBuffer.removeFirst()
+    }
+
+    // MARK: - Private
+
+    private func valueForParameter(_ i: Int, offset: Int) -> Int {
+        var remainder = memory[i] / 100
+        for _ in 0..<(offset - 1) {
+            remainder = remainder / 10
+        }
+
+        let mode = ParameterMode(rawValue: remainder % 10)!
+        switch mode {
+        case .position:
+            return memory[memory[i + offset]]
+        case .immediate:
+            return memory[i + offset]
+        }
     }
 }
