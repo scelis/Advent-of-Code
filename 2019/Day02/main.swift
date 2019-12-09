@@ -6,10 +6,10 @@ let integers = input.components(separatedBy: ",").map({ Int($0)! })
 
 func runComputer(noun: Int, verb: Int) -> Int {
     let computer = IntcodeComputer(memory: integers)
-    computer.memory[1] = noun
-    computer.memory[2] = verb
+    computer[1] = noun
+    computer[2] = verb
     _ = computer.run()
-    return computer.memory[0]
+    return computer[0]
 }
 
 func part1() -> Int {
@@ -22,8 +22,8 @@ func part2() -> Int {
     for noun in 0...99 {
         for verb in 0...99 {
             let computer = IntcodeComputer(memory: integers)
-            computer.memory[1] = noun
-            computer.memory[2] = verb
+            computer[1] = noun
+            computer[2] = verb
 
             if runComputer(noun: noun, verb: verb) == desired {
                 return 100 * noun + verb
@@ -34,5 +34,5 @@ func part2() -> Int {
     return -1
 }
 
-print("Part 1: \(part1())")
-print("Part 2: \(part2())")
+print("Part 1: \(part1()) = 9706670")
+print("Part 2: \(part2()) = 2552")

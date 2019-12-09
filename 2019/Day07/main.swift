@@ -77,6 +77,6 @@ func part2(memory: [Int]) -> Int {
 let input = Advent.contentsOfFile(withName: "input.txt")!
 let integers = input.components(separatedBy: ",").map({ Int($0)! })
 let output1 = part1(memory: integers)
-print("Part 1: \(output1)")
+print("Part 1: \(output1) = 46248")
 let output2 = part2(memory: integers)
-print("Part 2: \(output2)")
+print("Part 2: \(output2) = 54163586")
