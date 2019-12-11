@@ -16,29 +16,6 @@ class Robot {
         computer = IntcodeComputer(memory: input)
     }
 
-    func part1() -> Int {
-        run()
-
-        return coordinatesPainted.count
-    }
-
-    func part2() -> String {
-        coordinatesPainted[coordinate] = .white
-        run()
-
-        var output = ""
-        let allCoordinates = coordinatesPainted.keys
-        for y in allCoordinates.top!.y...allCoordinates.bottom!.y {
-            for x in allCoordinates.left!.x...allCoordinates.right!.x {
-                let color = coordinatesPainted[Coordinate(x: x, y: y)] ?? .black
-                output += (color == .black) ? "⬛️" : "⬜️"
-            }
-            output += "\n"
-        }
-
-        return output
-    }
-
     private func run() {
         computer.run()
 
@@ -60,6 +37,29 @@ class Robot {
                 computer.run(input: [color.rawValue])
             }
         }
+    }
+
+    func part1() -> Int {
+        run()
+
+        return coordinatesPainted.count
+    }
+
+    func part2() -> String {
+        coordinatesPainted[coordinate] = .white
+        run()
+
+        var output = ""
+        let allCoordinates = coordinatesPainted.keys
+        for y in allCoordinates.top!.y...allCoordinates.bottom!.y {
+            for x in allCoordinates.left!.x...allCoordinates.right!.x {
+                let color = coordinatesPainted[Coordinate(x: x, y: y)] ?? .black
+                output += (color == .black) ? "⬛️" : "⬜️"
+            }
+            output += "\n"
+        }
+
+        return output
     }
 }
 
