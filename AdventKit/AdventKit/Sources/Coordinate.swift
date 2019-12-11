@@ -30,7 +30,33 @@ public struct Coordinate: Hashable {
         return abs(x - from.x) + abs(y - from.y)
     }
 
-    public func step(inDirection direction: Direction) -> Coordinate {
-        return Coordinate(x: x + direction.dx, y: y + direction.dy)
+    public func step(inDirection direction: Direction, distance: Int = 1) -> Coordinate {
+        return Coordinate(x: x + direction.dx * distance, y: y + direction.dy * distance)
+    }
+}
+
+public extension Collection where Element == Coordinate {
+    var top: Coordinate? {
+        return self.min { a, b -> Bool in
+            return a.y < b.y
+        }
+    }
+
+    var bottom: Coordinate? {
+        return self.max { a, b -> Bool in
+            return a.y < b.y
+        }
+    }
+
+    var left: Coordinate? {
+        return self.min { a, b -> Bool in
+            return a.x < b.x
+        }
+    }
+
+    var right: Coordinate? {
+        return self.max { a, b -> Bool in
+            return a.x < b.x
+        }
     }
 }

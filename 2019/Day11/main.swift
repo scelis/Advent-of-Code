@@ -26,22 +26,10 @@ class Robot {
         coordinatesPainted[coordinate] = .white
         run()
 
-        let top = coordinatesPainted.keys.min { a, b -> Bool in
-            return a.y < b.y
-        }
-        let bottom = coordinatesPainted.keys.max { a, b -> Bool in
-            return a.y < b.y
-        }
-        let left = coordinatesPainted.keys.min { a, b -> Bool in
-            return a.x < b.x
-        }
-        let right = coordinatesPainted.keys.max { a, b -> Bool in
-            return a.x < b.x
-        }
-
         var output = ""
-        for y in top!.y...bottom!.y {
-            for x in left!.x...right!.x {
+        let allCoordinates = coordinatesPainted.keys
+        for y in allCoordinates.top!.y...allCoordinates.bottom!.y {
+            for x in allCoordinates.left!.x...allCoordinates.right!.x {
                 let color = coordinatesPainted[Coordinate(x: x, y: y)] ?? .black
                 output += (color == .black) ? "⬛️" : "⬜️"
             }
