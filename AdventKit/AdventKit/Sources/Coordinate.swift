@@ -29,4 +29,8 @@ public struct Coordinate: Hashable {
     public func manhattanDistance(from: Coordinate) -> Int {
         return abs(x - from.x) + abs(y - from.y)
     }
+
+    public func step(inDirection direction: Direction) -> Coordinate {
+        return Coordinate(x: x + direction.dx, y: y + direction.dy)
+    }
 }
