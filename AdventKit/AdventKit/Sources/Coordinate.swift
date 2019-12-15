@@ -12,6 +12,8 @@ public struct Coordinate: Hashable {
     public var x: Int
     public var y: Int
 
+    public static let zero = Coordinate(x: 0, y: 0)
+
     public init(x: Int, y: Int) {
         self.x = x
         self.y = y
@@ -31,6 +33,10 @@ public struct Coordinate: Hashable {
     }
 
     public func step(inDirection direction: Direction, distance: Int = 1) -> Coordinate {
+        return Coordinate(x: x + direction.dx * distance, y: y + direction.dy * distance)
+    }
+
+    public func step(inCardinalDirection direction: CardinalDirection, distance: Int = 1) -> Coordinate {
         return Coordinate(x: x + direction.dx * distance, y: y + direction.dy * distance)
     }
 }
