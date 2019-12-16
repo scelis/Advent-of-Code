@@ -53,6 +53,9 @@ class Day15 {
         unexplored.append(currentNode)
     }
 
+    /// This currently always travels all the way home and then all the way to the destination node.
+    /// This could be optimized to only travel back home as far as necessary given the current location
+    /// and destination paths.
     func travel(to node: Node) {
         guard currentNode.coordinate != node.coordinate else { return }
 
