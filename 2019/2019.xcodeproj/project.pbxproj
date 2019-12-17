@@ -71,6 +71,10 @@
 		6398ECDE23A7B4ED00D5F724 /* AdventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6364B4A123954D2B00300316 /* AdventKit.framework */; };
 		6398ECDF23A7B4ED00D5F724 /* AdventKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6364B4A123954D2B00300316 /* AdventKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6398ECE523A83AD200D5F724 /* input.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6398ECE423A83AD200D5F724 /* input.txt */; };
+		6398ECED23A908A700D5F724 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6398ECEC23A908A700D5F724 /* main.swift */; };
+		6398ECF823A908AF00D5F724 /* AdventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6364B4A123954D2B00300316 /* AdventKit.framework */; };
+		6398ECF923A908AF00D5F724 /* AdventKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6364B4A123954D2B00300316 /* AdventKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6398ECFC23A90A0E00D5F724 /* input.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6398ECFB23A90A0E00D5F724 /* input.txt */; };
 		63AAC82C23A120BF001140EB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AAC82B23A120BF001140EB /* main.swift */; };
 		63AAC83723A120CC001140EB /* AdventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6364B4A123954D2B00300316 /* AdventKit.framework */; };
 		63AAC83823A120CC001140EB /* AdventKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6364B4A123954D2B00300316 /* AdventKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -243,6 +247,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6398ECFA23A908AF00D5F724 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6398ECF923A908AF00D5F724 /* AdventKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		63AAC83923A120CC001140EB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -322,6 +337,10 @@
 		6398ECD223A7B4E300D5F724 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		6398ECD923A7B4E400D5F724 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6398ECE423A83AD200D5F724 /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
+		6398ECEA23A908A700D5F724 /* Day17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Day17.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6398ECEC23A908A700D5F724 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		6398ECF323A908A900D5F724 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6398ECFB23A90A0E00D5F724 /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
 		63AAC82923A120BF001140EB /* Day11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Day11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63AAC82B23A120BF001140EB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		63AAC83223A120C2001140EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -449,6 +468,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6398ECE723A908A700D5F724 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6398ECF823A908AF00D5F724 /* AdventKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		63AAC82623A120BF001140EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -489,6 +516,7 @@
 				6398EC9723A5781300D5F724 /* Day14 */,
 				6398ECB823A6B14500D5F724 /* Day15 */,
 				6398ECD123A7B4E300D5F724 /* Day16 */,
+				6398ECEB23A908A700D5F724 /* Day17 */,
 				6364B49023954CB400300316 /* Products */,
 				6364B4A023954D2B00300316 /* Frameworks */,
 			);
@@ -513,6 +541,7 @@
 				6398EC9623A5781300D5F724 /* Day14.app */,
 				6398ECB723A6B14500D5F724 /* Day15.app */,
 				6398ECD023A7B4E300D5F724 /* Day16.app */,
+				6398ECEA23A908A700D5F724 /* Day17.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -667,6 +696,16 @@
 				6398ECD923A7B4E400D5F724 /* Info.plist */,
 			);
 			path = Day16;
+			sourceTree = "<group>";
+		};
+		6398ECEB23A908A700D5F724 /* Day17 */ = {
+			isa = PBXGroup;
+			children = (
+				6398ECEC23A908A700D5F724 /* main.swift */,
+				6398ECFB23A90A0E00D5F724 /* input.txt */,
+				6398ECF323A908A900D5F724 /* Info.plist */,
+			);
+			path = Day17;
 			sourceTree = "<group>";
 		};
 		63AAC82A23A120BF001140EB /* Day11 */ = {
@@ -952,6 +991,24 @@
 			productReference = 6398ECD023A7B4E300D5F724 /* Day16.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6398ECE923A908A700D5F724 /* Day17 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6398ECF523A908A900D5F724 /* Build configuration list for PBXNativeTarget "Day17" */;
+			buildPhases = (
+				6398ECE623A908A700D5F724 /* Sources */,
+				6398ECE723A908A700D5F724 /* Frameworks */,
+				6398ECE823A908A700D5F724 /* Resources */,
+				6398ECFA23A908AF00D5F724 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Day17;
+			productName = Day17;
+			productReference = 6398ECEA23A908A700D5F724 /* Day17.app */;
+			productType = "com.apple.product-type.application";
+		};
 		63AAC82823A120BF001140EB /* Day11 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63AAC83623A120C2001140EB /* Build configuration list for PBXNativeTarget "Day11" */;
@@ -1025,6 +1082,9 @@
 					6398ECCF23A7B4E300D5F724 = {
 						CreatedOnToolsVersion = 11.3;
 					};
+					6398ECE923A908A700D5F724 = {
+						CreatedOnToolsVersion = 11.3;
+					};
 					63AAC82823A120BF001140EB = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
@@ -1059,6 +1119,7 @@
 				6398EC9523A5781300D5F724 /* Day14 */,
 				6398ECB623A6B14500D5F724 /* Day15 */,
 				6398ECCF23A7B4E300D5F724 /* Day16 */,
+				6398ECE923A908A700D5F724 /* Day17 */,
 			);
 		};
 /* End PBXProject section */
@@ -1185,6 +1246,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6398ECE523A83AD200D5F724 /* input.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6398ECE823A908A700D5F724 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6398ECFC23A90A0E00D5F724 /* input.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1316,6 +1385,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6398ECD323A7B4E300D5F724 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6398ECE623A908A700D5F724 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6398ECED23A908A700D5F724 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2013,6 +2090,44 @@
 			};
 			name = Release;
 		};
+		6398ECF623A908A900D5F724 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4DS2QCZC54;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Day17/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sebastiancelis.Day17;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6398ECF723A908A900D5F724 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4DS2QCZC54;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Day17/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sebastiancelis.Day17;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		63AAC83423A120C2001140EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2194,6 +2309,15 @@
 			buildConfigurations = (
 				6398ECDC23A7B4E400D5F724 /* Debug */,
 				6398ECDD23A7B4E400D5F724 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6398ECF523A908A900D5F724 /* Build configuration list for PBXNativeTarget "Day17" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6398ECF623A908A900D5F724 /* Debug */,
+				6398ECF723A908A900D5F724 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

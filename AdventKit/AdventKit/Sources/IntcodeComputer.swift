@@ -127,6 +127,10 @@ public class IntcodeComputer {
         return outputBuffer.removeFirst()
     }
 
+    public func clearOutputBuffer() {
+        outputBuffer.removeAll()
+    }
+
     // MARK: - Private
 
     private func modeForParameter(_ i: Int, offset: Int) -> ParameterMode {
