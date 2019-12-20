@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum Direction: String {
+public enum Direction: String, CaseIterable {
     case up = "U"
     case down = "D"
     case left = "L"
