@@ -122,9 +122,28 @@ public class IntcodeComputer {
         }
     }
 
+    public func run(asciiCommand: String) {
+        var array = asciiCommand.map({ Int($0.asciiValue!) })
+        array.append(10)
+        run(input: array)
+    }
+
     public func readInt() -> Int? {
         guard !outputBuffer.isEmpty else { return nil }
         return outputBuffer.removeFirst()
+    }
+
+    public func printOutputAsAscii() {
+        var output = ""
+        while
+            !outputBuffer.isEmpty,
+            outputBuffer[0] <= 128,
+            let scalar = UnicodeScalar(outputBuffer[0])
+        {
+            output += String(Character(scalar))
+            outputBuffer.removeFirst()
+        }
+        print(output.trimmingCharacters(in: .whitespacesAndNewlines))
     }
 
     public func clearOutputBuffer() {
