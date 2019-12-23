@@ -103,6 +103,7 @@
 		63C8BB1C23B0F2D20012592A /* AdventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6364B4A123954D2B00300316 /* AdventKit.framework */; };
 		63C8BB1D23B0F2D20012592A /* AdventKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6364B4A123954D2B00300316 /* AdventKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63C8BB2023B0F2F50012592A /* input.txt in Resources */ = {isa = PBXBuildFile; fileRef = 63C8BB1F23B0F2F50012592A /* input.txt */; };
+		63C8BB2223B0FD680012592A /* input.txt in Resources */ = {isa = PBXBuildFile; fileRef = 63C8BB2123B0FD680012592A /* input.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -459,6 +460,7 @@
 		63C8BB1023B0F2C20012592A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		63C8BB1723B0F2C40012592A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63C8BB1F23B0F2F50012592A /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
+		63C8BB2123B0FD680012592A /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -886,6 +888,7 @@
 			isa = PBXGroup;
 			children = (
 				6398ED0723AC2CDE00D5F724 /* main.swift */,
+				63C8BB2123B0FD680012592A /* input.txt */,
 				6398ED0E23AC2CDF00D5F724 /* Info.plist */,
 			);
 			path = Day18;
@@ -1627,6 +1630,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63C8BB2223B0FD680012592A /* input.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
