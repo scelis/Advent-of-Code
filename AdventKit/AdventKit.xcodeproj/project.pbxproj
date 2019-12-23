@@ -20,6 +20,7 @@
 		6398EC7023A2724700D5F724 /* Velocity3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6398EC6F23A2724700D5F724 /* Velocity3D.swift */; };
 		6398EC7423A289F300D5F724 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6398EC7323A289F300D5F724 /* Math.swift */; };
 		6398ECCB23A6B74F00D5F724 /* CardinalDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6398ECCA23A6B74F00D5F724 /* CardinalDirection.swift */; };
+		63C8BB2723B1B6130012592A /* Maze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C8BB2623B1B6130012592A /* Maze.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		6398EC6F23A2724700D5F724 /* Velocity3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Velocity3D.swift; sourceTree = "<group>"; };
 		6398EC7323A289F300D5F724 /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		6398ECCA23A6B74F00D5F724 /* CardinalDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardinalDirection.swift; sourceTree = "<group>"; };
+		63C8BB2623B1B6130012592A /* Maze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maze.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				6364B4F42397E7F000300316 /* Int+Extensions.swift */,
 				6364B50F239934EA00300316 /* IntcodeComputer.swift */,
 				6398EC7323A289F300D5F724 /* Math.swift */,
+				63C8BB2623B1B6130012592A /* Maze.swift */,
 				6306AFAB2375CEDB00D685FA /* String+Extensions.swift */,
 				6398EC6F23A2724700D5F724 /* Velocity3D.swift */,
 			);
@@ -192,6 +195,7 @@
 				6364B510239934EA00300316 /* IntcodeComputer.swift in Sources */,
 				6398EC6E23A2721300D5F724 /* Coordinate3D.swift in Sources */,
 				6398EC7023A2724700D5F724 /* Velocity3D.swift in Sources */,
+				63C8BB2723B1B6130012592A /* Maze.swift in Sources */,
 				6364B4F52397E7F000300316 /* Int+Extensions.swift in Sources */,
 				633A6C36239FED3100C83EE6 /* Geometry.swift in Sources */,
 				6364B4D62396987000300316 /* Direction.swift in Sources */,
