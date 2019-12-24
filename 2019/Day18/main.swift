@@ -54,38 +54,36 @@ class TritonMaze: Maze {
         return keys
     }()
 
-    var currentDistance = 0
+    func coordinatesReachable(from: [Int]) -> [[Int]] {
+        var reachable: [[Int]] = []
 
-    func run() -> Int {
-        func coordinatesReachable(from: [Int]) -> [[Int]] {
-            var reachable: [[Int]] = []
+        for i in 0..<(from.count - 1) {
+            for j in [1, -1] {
+                var tmp = from
+                tmp[i] += j
 
-            for i in 0..<(from.count - 1) {
-                for j in [1, -1] {
-                    var tmp = from
-                    tmp[i] += j
-
-                    if let tile = map[[tmp[i / 2], tmp[i / 2 + 1]]] {
-                        switch tile {
-                        case .floor:
+                if let tile = map[[tmp[i / 2], tmp[i / 2 + 1]]] {
+                    switch tile {
+                    case .floor:
+                        reachable.append(tmp)
+                    case .key(let character):
+                        tmp[tmp.count - 1] = tmp[tmp.count - 1] | representation(forKey: character)
+                        reachable.append(tmp)
+                    case .door(let character):
+                        if (tmp[tmp.count - 1] & representation(forKey: character)) != 0 {
                             reachable.append(tmp)
-                        case .key(let character):
-                            tmp[tmp.count - 1] = tmp[tmp.count - 1] | representation(forKey: character)
-                            reachable.append(tmp)
-                        case .door(let character):
-                            if (tmp[tmp.count - 1] & representation(forKey: character)) != 0 {
-                                reachable.append(tmp)
-                            }
-                        default:
-                            break
                         }
+                    default:
+                        break
                     }
                 }
             }
-
-            return reachable
         }
 
+        return reachable
+    }
+
+    func part1() -> (Int, String) {
         // Find starting coordinate(s)
         var start: [Int] = []
         for (location, tile) in map {
@@ -100,38 +98,80 @@ class TritonMaze: Maze {
 
         var unexplored: [[Int]] = [start]
         var distances: [[Int]: Int] = [:]
+        var keys: [[Int]: String] = [:]
         distances[start] = 0
+        keys[start] = ""
 
         while !unexplored.isEmpty {
             let locationToExplore = unexplored.removeFirst()
             let distance = distances[locationToExplore]!
 
-            if distance > currentDistance {
-                currentDistance = distance
-                NSLog("Looking at distance \(currentDistance)")
-            }
-
             for adjacentLocation in coordinatesReachable(from: locationToExplore) {
                 if distances[adjacentLocation] == nil {
                     distances[adjacentLocation] = distance + 1
+
+                    var nextKeys = keys[locationToExplore]!
+                    let tile = map[[adjacentLocation[0], adjacentLocation[1]]]!
+                    if
+                        case .key(let character) = tile,
+                        !nextKeys.contains(character)
+                    {
+                        nextKeys += String(character)
+                    }
+                    keys[adjacentLocation] = nextKeys
+
                     unexplored.append(adjacentLocation)
                     if adjacentLocation[adjacentLocation.count - 1] == allKeys {
-                        return distance + 1
+                        return (distance + 1, nextKeys)
                     }
                 }
             }
         }
 
-        return -1
+        fatalError()
+    }
+
+    func part2(keys: [Character]) -> Int {
+        var coordinates: [[Int]] = []
+        var keyCoordinates: [Character: [Int]] = [:]
+
+        for (location, tile) in map {
+            switch tile {
+            case .start:
+                coordinates.append(location)
+            case .key(let character):
+                keyCoordinates[character] = location
+            default:
+                break
+            }
+        }
+
+        var keysFound = 0
+        var totalDistance = 0
+        keys: for key in keys {
+            for i in 0..<coordinates.count {
+                let from = coordinates[i] + [keysFound]
+                let to = keyCoordinates[key]! + [keysFound | representation(forKey: key)]
+                if let innerDistance = distance(from: from, to: to) {
+                    print("Found key: \(key) from \(from) to \(to) - \(innerDistance)")
+                    totalDistance += innerDistance
+                    keysFound = keysFound | representation(forKey: key)
+                    coordinates[i] = Array(to.prefix(2))
+                    continue keys
+                }
+            }
+        }
+
+        return totalDistance
     }
 }
 
 let input1 = Advent.contentsOfFile(withName: "input.txt")!
 let maze1 = TritonMaze(input: input1)
-let answer1 = maze1.run()
+let answer1 = maze1.part1()
 print("Part 1: \(answer1)")
 
 let input2 = Advent.contentsOfFile(withName: "input2.txt")!
 let maze2 = TritonMaze(input: input2)
-let answer2 = maze2.run()
-print("Part 2: \(answer2)")
+let answer2 = maze2.part2(keys: Array("rgbkfxuleacqpzsmotdwnvhjiy"))
+print("Part 2: \(answer2)") // < 1794

@@ -16,6 +16,7 @@ public protocol Maze {
     associatedtype Tile: TileType
     typealias TileMap = [[Int]: Tile]
     var map: TileMap { get }
+    func coordinatesReachable(from: [Int]) -> [[Int]]
 }
 
 public extension Maze {
@@ -76,6 +77,6 @@ public extension Maze {
     }
 
     func distance(from: [Int], to: [Int]) -> Int? {
-        return path(from: from, to: from)?.count
+        return path(from: from, to: to)?.count
     }
 }
