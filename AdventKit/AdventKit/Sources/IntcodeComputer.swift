@@ -133,7 +133,7 @@ public class IntcodeComputer {
         return outputBuffer.removeFirst()
     }
 
-    public func printOutputAsAscii() {
+    public func outputAsAscii() -> String {
         var output = ""
         while
             !outputBuffer.isEmpty,
@@ -143,7 +143,11 @@ public class IntcodeComputer {
             output += String(Character(scalar))
             outputBuffer.removeFirst()
         }
-        print(output.trimmingCharacters(in: .whitespacesAndNewlines))
+        return output.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+
+    public func printOutputAsAscii() {
+        print(outputAsAscii())
     }
 
     public func clearOutputBuffer() {
